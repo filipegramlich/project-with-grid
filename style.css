@@ -1,0 +1,21 @@
+:root{
+    --ff-heading: "Epilogue", sans-serif;
+    --ff-texting: "Open Sans", sans-serif;
+
+    --hue:250;
+    --bg-principal: hsl(var(--hue), 22%, 20%);
+    --fc-principal: hsl(var(--hue), 0%, 100%);
+    --fc-secondary: hsl(var(--hue), 50%, 80%);
+}
+body {
+    font-family: var(--ff-texting);
+    background-color: var(--bg-principal);
+    color: var(--fc-principal);
+}
+header {
+    font-family: var(--ff-heading);
+}
+header p {
+    color: var(--fc-secondary);
+    text-transform: uppercase;
+}
