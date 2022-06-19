@@ -30,6 +30,11 @@ body {
 img{
     width: 100%;
     height: auto;
+
+}
+img:hover{
+    transform: scale(1.1);
+    opacity: 0.6;
 }
 header {
     margin: 10rem 0 8rem;
@@ -64,6 +69,7 @@ main{
     height: 41.6rem;
     object-fit: cover;
     border-radius: 6px;
+    transition: all 200ms;
 }
 .card h2{
     position:absolute;
