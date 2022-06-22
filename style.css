@@ -40,6 +40,10 @@ header {
     margin: 10rem 0 8rem;
     font-family: var(--ff-heading);
     text-align: center;
+
+    animation:topdown 700ms;
+    
+ 
 }
 header p {
     color: var(--fc-secondary);
@@ -60,6 +64,7 @@ header h1{
 main{
     display: grid;
     gap:3.2rem;
+    animation: downtop 700ms 350ms backwards;
 }
 .card {
     position: relative;
@@ -97,3 +102,32 @@ main{
     display: inline-flex;
     align-items: center;
 }
+
+
+@keyframes topdown {
+
+0%{
+    opacity: 0;
+    transform: translateY(-15px);
+}
+100%{
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+}
+@keyframes downtop {
+    0%{
+        opacity: 0;
+        transform: translateY(15px);
+    
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    
+    }
+    
+    }
