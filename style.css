@@ -30,7 +30,7 @@ body {
 img{
     width: 100%;
     height: auto;
-
+    
 }
 img:hover{
     transform: scale(1.1);
@@ -40,20 +40,20 @@ header {
     margin: 10rem 0 8rem;
     font-family: var(--ff-heading);
     text-align: center;
-
+    
     animation:topdown 700ms;
     
- 
+    
 }
 header p {
     color: var(--fc-secondary);
     text-transform: uppercase;
-
+    
     letter-spacing: 3px;
     line-height: 3.2rem;
-
+    
     font-weight: 400;
-
+    
     margin-bottom: 1.7rem;
 }
 header h1{
@@ -62,10 +62,12 @@ header h1{
     line-height: 3.8rem;
 }
 main{
-    display: grid;
     gap:3.2rem;
     animation: downtop 700ms 350ms backwards;
+    
+    display: grid;
 }
+
 .card {
     position: relative;
     font-family: var(--ff-heading);
@@ -81,7 +83,7 @@ main{
     bottom:5.2rem;
     left:2.8rem;
 
-    font-size: var(--fs-heading);
+    font-size: 4rem;
     font-weight: 800;
 
     display: flex;
@@ -98,7 +100,7 @@ main{
 
     width: fit-content;
     height:3.8rem;
-
+    
     display: inline-flex;
     align-items: center;
 }
@@ -121,13 +123,46 @@ main{
     0%{
         opacity: 0;
         transform: translateY(15px);
-    
+        
     }
     
     100%{
         opacity: 1;
         transform: translateY(0);
-    
+        
     }
     
+}
+
+@media (min-width:700px){
+    :root{
+        --fs-heading:5.6rem;
     }
+    .page{
+        max-width: 117rem;
+        padding: 0 5rem;
+    }
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+    @media (min-width:930px){
+        main{grid-template-areas: "colunaA colunaB colunaB"
+        "colunaC colunaC colunaD";}
+        main :nth-child(1){
+            grid-area: colunaA;
+            
+        }
+        main :nth-child(2){
+            grid-area: colunaB;
+            
+        }
+        main :nth-child(3){
+            grid-area: colunaC;
+            
+        }
+        main :nth-child(4){
+            grid-area: colunaD;
+            
+        }
+        }
